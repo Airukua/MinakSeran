@@ -9,35 +9,18 @@ description = "Tokenizer for Seram (Geser, Gorom) language"
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT" }
-
-keywords = ["tokenizer", "seram", "geser", "gorom", "language processing"]
-
 authors = [
     { name = "Abdul Wahid Rukua", email = "rukuaabdulwahid@gmail.com" },
 ]
-
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent",
-    "License :: OSI Approved :: MIT License",
-    "Intended Audience :: Developers",
-    "Topic :: Text Processing :: Linguistic",
-]
-
 dependencies = [
     "regex",
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Airukua/MinakSeran.git"
-"Bug Tracker" = "https://github.com/Airukua/MinakSeran.git/issues"
-"Source Code" = "https://github.com/Airukua/MinakSeran.git"
+"Homepage" = "https://github.com/Airukua/MinakSeran"
 
 [tool.setuptools.packages.find]
 where = ["."]
 
 [tool.setuptools.package-data]
-seram_tokenizer = ["data/*.txt", "data/*.json", "data/*"]  # Sertakan semua file di folder data
-
-[tool.setuptools]
-include-package-data = true
+seram_tokenizer = ["data/*"]
