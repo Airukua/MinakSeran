@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='seram tokenizer',
+    name='seram_tokenizer',
     version='0.1.0',
     author='Abdul Wahid Rukua',
     author_email='rukuaabdulwahid@gmail.com',
