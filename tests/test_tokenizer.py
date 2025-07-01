@@ -58,7 +58,6 @@ class TestFindUnmatchedWords(unittest.TestCase):
         DICTIONARY_WORDS.clear()
         DICTIONARY_WORDS.update(cls.original_dictionary_words)
 
-
     def test_all_words_match(self):
         words = ["kata", "ada", "geser"]
         self.assertEqual(find_unmatched_words(words), [])
