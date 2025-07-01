@@ -6,13 +6,14 @@ setup(
     author='Abdul Wahid Rukua',
     author_email='rukuaabdulwahid@gmail.com',
     url='https://github.com/Airukua/MinakSeran.git',
-    packages=find_packages(exclude=['tests']),
-    description='A tokenizer for the Seram (geser, gorom) language',
-    long_description=open('README.md').read(),
+    packages=find_packages(),
     include_package_data=True,
     install_requires=[
         'regex',
     ],
+    description='Tokenizer for Seram (Geser, Gorom) language',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
