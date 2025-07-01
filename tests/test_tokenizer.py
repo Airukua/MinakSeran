@@ -52,7 +52,9 @@ class TestFindUnmatchedWords(unittest.TestCase):
     def setUpClass(cls):
         cls.original_dictionary_words = set(DICTIONARY_WORDS) 
         DICTIONARY_WORDS.clear()
-        DICTIONARY_WORDS.update({"kata", "ada", "geser", "suka", "lari-lari", "makan-makan"})
+        DICTIONARY_WORDS.update({"kata", "ada", "geser", "suka", "lari-lari", "makan-makan",
+                                "abi-abis", "nina", "baba"
+                                })
 
     @classmethod
     def tearDownClass(cls):
