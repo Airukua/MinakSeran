@@ -56,7 +56,7 @@ print(f"Tokens: {tokens}")
 
 ```
 Original text: aku nugu ngasana habiba, aku atamari wanu karay. 
-Tokens: ['aku', 'nugu', 'ngasana', 'habiba',',','aku', 'atamari', 'wanu', 'wanu', 'karay','.']
+Tokens: ['aku', 'nugu', 'ngasana', 'habiba',',','aku', 'atamari', 'wanu', 'karay','.']
 ```
 
 -----

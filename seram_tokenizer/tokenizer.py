@@ -3,14 +3,14 @@ import re
 from typing import List, Dict
 from .find_reduplication import extract_reduplications
 
-class GeserTokenizer:
+class SeramTokenizer:
     """
-    A tokenizer for Geser text, designed to handle reduplicated words and preserve punctuation as separate tokens.
+    A tokenizer for Seram text, designed to handle reduplicated words and preserve punctuation as separate tokens.
     """
 
     def __init__(self, text: str):
         """
-        Initializes the GeserTokenizer with the input text.
+        Initializes the SeramTokenizer with the input text.
 
         Args:
             text (str): The input text to be tokenized.

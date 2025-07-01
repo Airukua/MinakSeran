@@ -1,6 +1,6 @@
 import re
 
-class ParagogNormalizer:
+class GeserParagogNormalizer:
     """
     A class to normalize paragogs in Geser text.
     A paragog is defined as a word ending with 'a' or 'ra'.
