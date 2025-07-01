@@ -37,9 +37,3 @@ dependencies = [
 # Konfigurasi Setuptools khusus, termasuk package_data
 [tool.setuptools.package-data]
 "seram_tokenizer" = ["data/*"]
-
-# Jika Anda ingin setuptools secara otomatis menyertakan data paket
-# (mirip dengan include_package_data=True di setup.py)
-# Anda bisa menambahkan ini, meskipun package-data di atas lebih spesifik.
-# [tool.setuptools]
-# include-package-data = true
