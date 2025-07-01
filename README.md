@@ -39,14 +39,14 @@ Here's a basic example of how to use `seram tokenizer` in your Python code:
 # Import the library
 from seram_tokenizer import SeramTokenizer
 
-# Initialize the tokenizer
-tokenizer = SeramTokenizer()
-
 # Text in Seram language
 text = "aku nugu ngasana habiba, aku atamari wanu karay."
 
+# Initialize the tokenizer
+tokenizer = SeramTokenizer(text)
+
 # Perform tokenization
-tokens = tokenizer.tokenize(text)
+tokens = tokenizer.tokenize()
 
 # Print the results
 print(f"Original text: {text}")
