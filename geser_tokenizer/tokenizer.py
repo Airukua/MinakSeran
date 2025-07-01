@@ -2,11 +2,12 @@
 import re
 import os
 from typing import List, Set, Dict
-from find_reduplication import extract_reduplications
+from .find_reduplication import extract_reduplications
+import pkg_resources
 
 # Load the dictionary words into a set for efficient O(1) average time complexity lookups.
 # This ensures that checking if a word exists in the dictionary is very fast.
-DICTIONARY_FILE_PATH = 'utils/data/geser_word.txt'
+DICTIONARY_FILE_PATH = pkg_resources.resource_filename(__name__, 'data/geser_word.txt')
 DICTIONARY_WORDS: Set[str] = set()
 
 try:
@@ -42,7 +43,7 @@ class GeserTokenizer:
         self.text = text
 
         # Regex pattern to capture various punctuation marks and ellipses.
-        # This pattern is used to remove punctuation from tokens.
+        # This pattern is now primarily used to replace punctuation with spaces.
         self.punctuation_pattern = re.compile(
             r"([.,!?;:\'\"(){}\[\]<>~`@#$%^&*/+=|\\])|(\.{3})|([^\s\w]|^)-|-([^\s\w]|$)"
         )
@@ -55,9 +56,9 @@ class GeserTokenizer:
 
         The tokenization process involves:
         1. Identifying and temporarily replacing reduplicated words with unique placeholders.
-        2. Splitting the text into tokens based on whitespace.
-        3. Restoring the original reduplicated words from their placeholders.
-        4. Removing specified punctuation from the resulting tokens.
+        2. Replacing punctuation with spaces to act as delimiters.
+        3. Splitting the text into tokens based on whitespace.
+        4. Restoring the original reduplicated words from their placeholders.
 
         Returns:
             List[str]: A list of tokenized words.
@@ -66,12 +67,9 @@ class GeserTokenizer:
             return [] # Return empty list for empty input text
 
         # Step 1: Extract reduplicated words and prepare for replacement.
-        # We use a dictionary to map unique placeholders back to original words,
-        # ensuring correct restoration even if reduplicated words are substrings of others.
         reduplications: List[str] = extract_reduplications(self.text)
         
         # Create a mapping from a unique placeholder to the original reduplicated word.
-        # This helps in safely replacing and restoring words without conflicts.
         placeholder_map: Dict[str, str] = {}
         processed_text = self.text
         
@@ -79,11 +77,17 @@ class GeserTokenizer:
             # Create a unique placeholder for each reduplicated word.
             placeholder = f"__REDUPLICATION_PLACEHOLDER_{i}__"
             # Replace the original word with its unique placeholder in the text.
-            processed_text = processed_text.replace(word, placeholder)
+            # Use re.escape to handle special regex characters in the word itself.
+            processed_text = re.sub(re.escape(word), placeholder, processed_text)
             placeholder_map[placeholder] = word
 
-        # Step 2: Split the text into tokens based on whitespace.
-        tokens = self.split_pattern.split(processed_text)
+        # Step 2: Replace punctuation with spaces, then split by spaces.
+        # This effectively treats punctuation as word delimiters and removes them from tokens.
+        temp_text = self.punctuation_pattern.sub(' ', processed_text)
+        
+        # Split by one or more whitespace characters.
+        # This handles multiple spaces and ensures clean token separation.
+        tokens = self.split_pattern.split(temp_text)
 
         # Step 3: Restore the original reduplicated words from their placeholders.
         final_tokens: List[str] = []
@@ -92,15 +96,14 @@ class GeserTokenizer:
             # Iterate through the placeholder map to restore original words.
             for placeholder, original_word in placeholder_map.items():
                 restored_token = restored_token.replace(placeholder, original_word)
-            final_tokens.append(restored_token)
-
-        # Step 4: Remove punctuation from tokens and filter out any empty strings.
-        # The punctuation_pattern.sub('', token) replaces matched punctuation with an empty string.
-        tokens_without_punctuation = [
-            self.punctuation_pattern.sub('', token) for token in final_tokens if token
-        ]
+            
+            # Add to final tokens only if the token is not empty after restoration.
+            # This filters out any empty strings that might result from splitting
+            # consecutive delimiters (e.g., "word,,another" -> "word", "", "another").
+            if restored_token:
+                final_tokens.append(restored_token)
         
-        return tokens_without_punctuation
+        return final_tokens
 
 def find_unmatched_words(words: List[str]) -> List[str]:
     """
