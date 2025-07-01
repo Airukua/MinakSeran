@@ -43,9 +43,9 @@ class GeserTokenizer:
         self.text = text
 
         # Regex pattern to capture various punctuation marks and ellipses.
-        # This pattern is now primarily used to replace punctuation with spaces.
+        # Updated to handle hyphens more carefully - only treat standalone hyphens as separators
         self.punctuation_pattern = re.compile(
-            r"([.,!?;:\'\"(){}\[\]<>~`@#$%^&*/+=|\\])|(\.{3})|([^\s\w]|^)-|-([^\s\w]|$)"
+            r"([.,!?;:\'\"(){}\[\]<>~`@#$%^&*/+=|\\])|(\.{3})|(\s-\s)"
         )
         # Regex pattern to split text by one or more whitespace characters.
         self.split_pattern = re.compile(r'\s+')
@@ -80,6 +80,7 @@ class GeserTokenizer:
             # Use re.escape to handle special regex characters in the word itself.
             processed_text = re.sub(re.escape(word), placeholder, processed_text)
             placeholder_map[placeholder] = word
+            # if re.match(r'\s?\-\w+\-\s?|\s?\-\w+\s?|\s?\w+\-\s?', word):
 
         # Step 2: Replace punctuation with spaces, then split by spaces.
         # This effectively treats punctuation as word delimiters and removes them from tokens.
@@ -96,41 +97,8 @@ class GeserTokenizer:
             # Iterate through the placeholder map to restore original words.
             for placeholder, original_word in placeholder_map.items():
                 restored_token = restored_token.replace(placeholder, original_word)
-            
-            # Add to final tokens only if the token is not empty after restoration.
-            # This filters out any empty strings that might result from splitting
-            # consecutive delimiters (e.g., "word,,another" -> "word", "", "another").
             if restored_token:
-                final_tokens.append(restored_token)
-        
+                final_tokens.append(restored_token)  
         return final_tokens
 
-def find_unmatched_words(words: List[str]) -> List[str]:
-    """
-    Identifies words from a list that are not present in the globally loaded dictionary.
 
-    Args:
-        words (List[str]): A list of tokenized words to check against the dictionary.
-
-    Returns:
-        List[str]: A list of words that are not found in the dictionary.
-    
-    Raises:
-        TypeError: If the input 'words' is not a list.
-        ValueError: If the input 'words' list is empty.
-    """
-    if not isinstance(words, list):
-        raise TypeError("Input 'words' must be a list.")
-    
-    if not words: # Check for empty list more pythonically
-        raise ValueError("Input 'words' cannot be an empty list.")
-    
-    unmatched_words: List[str] = []
-    for word in words:
-        # Convert word to lowercase for case-insensitive matching if desired,
-        # or keep as is for case-sensitive matching.
-        # For now, assuming case-sensitive as per original code.
-        if word not in DICTIONARY_WORDS:
-            unmatched_words.append(word)
-            
-    return unmatched_words

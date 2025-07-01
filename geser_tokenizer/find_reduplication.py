@@ -18,7 +18,5 @@ def extract_reduplications(text: str) -> List[str]:
     if not isinstance(text, str):
         raise TypeError("Input 'text' must be a string.")
 
-    # Updated pattern: (\w+) captures a word part, and \1 ensures the second part is identical.
-    pattern = r'(\b\w+)-\1\b'
-    # \b is a word boundary, ensuring we match whole words and not parts of larger words.
+    pattern = r'\w+\-\w+'
     return re.findall(pattern, text)
