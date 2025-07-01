@@ -92,15 +92,3 @@ If you have any questions or would like to connect, feel free to reach out:
   * **Name**: Abdul Wahid Rukua
   * **Email**: rukuaabdulwahid@gmail.com
   * **GitHub**: [Airukua](https://github.com/Airukua)
-
------
-
-### Enhancements You Can Make:
-
-  * **Images/GIFs (Optional)**: If you have a visual example of the tokenizer in action, a small image or GIF can be very engaging.
-  * **Tokenization Details**: Briefly explain your tokenization approach (e.g., is it space-based, does it handle punctuation, does it deal with affixes, etc.). This will be very helpful for more technical users.
-  * **API Reference**: If your library has many functions, consider creating an "API Reference" section or linking to separate documentation (e.g., using Sphinx or another tool).
-  * **Advanced Examples**: Add more usage examples if there are more complex scenarios.
-  * **Tests**: Mention if the project has a test suite and how to run it (if relevant to users).
-
-Choose your preferred license (MIT or Apache 2.0) and replace `[MIT License / Apache License 2.0]` in the "License" section. Happy to help you make your project more accessible\!
