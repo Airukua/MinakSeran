@@ -1,10 +1,7 @@
 import unittest
 import os
 import sys
-
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-# Impor kelas dan fungsi dari paket geser_tokenizer
 from geser_tokenizer import GeserTokenizer, find_unmatched_words
 from geser_tokenizer.tokenizer import DICTIONARY_WORDS
 
@@ -42,7 +39,6 @@ class TestGeserTokenizer(unittest.TestCase):
         text = "Dia suka lari-lari di pagi hari dan makan-makan yang enak."
         tokenizer = GeserTokenizer(text)
         tokens = tokenizer.tokenize()
-
         self.assertIn("lari-lari", tokens)
         self.assertIn("makan-makan", tokens)
         self.assertNotIn("lari-lari.", tokens)
@@ -50,12 +46,10 @@ class TestGeserTokenizer(unittest.TestCase):
         expected_subset = {"Dia", "suka", "lari-lari", "di", "pagi", "hari", "dan", "makan-makan", "yang", "enak"}
         self.assertTrue(expected_subset.issubset(set(tokens)))
 
-
 class TestFindUnmatchedWords(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.original_dictionary_words = set(DICTIONARY_WORDS) # Simpan kamus asli
-        # Buat kamus tiruan untuk tes agar hasilnya konsisten
+        cls.original_dictionary_words = set(DICTIONARY_WORDS) 
         DICTIONARY_WORDS.clear()
         DICTIONARY_WORDS.update({"kata", "ada", "geser", "suka", "lari-lari", "makan-makan"})
 
@@ -94,7 +88,6 @@ class TestFindUnmatchedWords(unittest.TestCase):
         words = ["lari-lari", "makan-makan", "kata-baru"]
         unmatched = find_unmatched_words(words)
         self.assertCountEqual(unmatched, ["kata-baru"])
-
 
 if __name__ == '__main__':
     unittest.main()
