@@ -81,7 +81,7 @@ Make sure to read `CONTRIBUTING.md` (if you plan to create one) for more details
 
 ### License
 
-This project is licensed under the **[MIT License / Apache License 2.0]** – see the [LICENSE.md](LICENSE.md) file for full details.
+This project is licensed under the **MIT License** – see the [LICENSE.md](LICENSE.md) file for full details.
 
 -----
 
