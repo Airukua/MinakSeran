@@ -50,10 +50,6 @@ tokens = tokenizer.tokenize(text)
 # Print the results
 print(f"Original text: {text}")
 print(f"Tokens: {tokens}")
-
-# Another example (if you have other functions, add them here)
-# For instance: tokenizer.count_tokens(text)
-# print(f"Number of tokens: {tokenizer.count_tokens(text)}")
 ```
 
 **Expected output (example)**:
