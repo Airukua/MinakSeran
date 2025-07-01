@@ -1,16 +1,16 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"] # Pastikan setuptools>=64 untuk kepatuhan terbaru
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "seram_tokenizer"
 version = "0.1.0"
 description = "Tokenizer for Seram (Geser, Gorom) language"
-readme = "README.md" # Ini akan membaca README.md untuk long_description
+readme = "README.md"
 requires-python = ">=3.7"
-license = { text = "MIT" } # Asumsi Anda menggunakan lisensi MIT, atau jika ada file LICENSE, bisa { file = "LICENSE" }
+license = { text = "MIT" }
 
-keywords = ["tokenizer", "seram", "geser", "gorom", "language processing"] # Tambahkan kata kunci yang relevan
+keywords = ["tokenizer", "seram", "geser", "gorom", "language processing"]
 
 authors = [
     { name = "Abdul Wahid Rukua", email = "rukuaabdulwahid@gmail.com" },
@@ -19,16 +19,25 @@ authors = [
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
-    "License :: OSI Approved :: MIT License", # Penting: Tambahkan ini jika Anda punya lisensi
+    "License :: OSI Approved :: MIT License",
     "Intended Audience :: Developers",
     "Topic :: Text Processing :: Linguistic",
 ]
 
 dependencies = [
-    "regex", # Ini adalah install_requires Anda
+    "regex",
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/Airukua/MinakSeran.git"
 "Bug Tracker" = "https://github.com/Airukua/MinakSeran.git/issues"
 "Source Code" = "https://github.com/Airukua/MinakSeran.git"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+seram_tokenizer = ["data/*.txt", "data/*.json", "data/*"]  # Sertakan semua file di folder data
+
+[tool.setuptools]
+include-package-data = true
