@@ -6,7 +6,7 @@
 
 ### Project Description
 
-`seram(geser) tokenizer` is a Python library that provides tokenization functionality for the **Seram(geser)** language. This tool is designed to break down Seram(geser) text into smaller units, such as words or sub-words, which is a fundamental step in natural language processing (NLP) and text analysis.
+`Seram(Geser) Tokenizer` is a Python library that provides tokenization functionality for the **Seram(geser)** language. This tool is designed to break down Seram(geser) text into smaller units, such as words or sub-words, which is a fundamental step in natural language processing (NLP) and text analysis.
 
 -----
 
