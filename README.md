@@ -1,18 +1,18 @@
 -----
 
-# `Seram(Geser) Tokenizer`
+# `Seram Tokenizer`
 
 -----
 
 ### Project Description
 
-`Seram(Geser) Tokenizer` is a Python library that provides tokenization functionality for the **Seram(geser)** language. This tool is designed to break down Seram(geser) text into smaller units, such as words or sub-words, which is a fundamental step in natural language processing (NLP) and text analysis.
+`Seram Tokenizer` is a Python library that provides tokenization functionality for the **Seram** language. This tool is designed to break down Seram text into smaller units, such as words or sub-words, which is a fundamental step in natural language processing (NLP) and text analysis.
 
 -----
 
 ### Key Features
 
-  * **Efficient Tokenization**: Processes Seram(geser) text quickly and accurately.
+  * **Efficient Tokenization**: Processes Seram text quickly and accurately.
   * **Lightweight**: Minimal dependencies, easy to integrate into your projects.
   * **Easy to Use**: Simple and intuitive API interface.
 
@@ -23,7 +23,7 @@
 You can install `seram(geser) tokenizer` directly from GitHub using `pip`:
 
 ```bash
-pip install git+https://github.com/Airukua/geser_tokenizer.git@v0.1.0
+pip install git+https://github.com/Airukua/MinakSeran.git@v0.1.0
 ```
 
 **Note**: It's recommended to install a tagged version (like `@v0.1.0` or the latest stable release) to ensure you get a stable build.
