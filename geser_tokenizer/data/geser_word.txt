@@ -1,6 +1,7 @@
 aba-aba
 abata
 abi-abis
+bababis
 abdi
 abu-abu
 adat
@@ -9,6 +10,8 @@ afi
 afi boil
 afi war
 ais
+gais
+faik
 akar
 akata
 alata
@@ -83,6 +86,7 @@ baca
 barenti
 baretan
 bagan
+bagana
 bagi
 bagian
 bagi-bagi
@@ -150,6 +154,7 @@ boluke
 botu
 bora
 bo wani
+mura wani
 bual
 bus
 bulat
@@ -160,6 +165,7 @@ buta huruf
 buti
 buka
 butira
+bua
 cangkula
 cara
 carita
@@ -182,9 +188,11 @@ dadafira
 daging
 daka
 dakan
+dakuk
 dalela
 dam
 damain
+datamain
 damar
 damoman
 danau
@@ -361,6 +369,7 @@ kota
 kotan
 kotor
 kar
+kuk
 kutu
 kuli
 kurap
@@ -499,6 +508,8 @@ molis
 momar
 momodar
 momokata
+moale
+muale
 na
 nababu
 nabagutik
@@ -523,7 +534,7 @@ nafiyal
 nafiyayal
 nasumak
 nagi
-naiv
+nai
 namā
 namamalui
 nama liur

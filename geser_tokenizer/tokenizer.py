@@ -1,6 +1,6 @@
 # Part of this code inspired by https://github.com/OpenNMT/Tokenizer/blob/master/bindings/python/README.md
 import re
-from typing import List, Set, Dict
+from typing import List, Dict
 from .find_reduplication import extract_reduplications
 
 class GeserTokenizer:
