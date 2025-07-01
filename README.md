@@ -1,6 +1,6 @@
 -----
 
-# `seram(geser) tokenizer`
+# `Seram(Geser) Tokenizer`
 
 -----
 
