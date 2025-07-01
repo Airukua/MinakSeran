@@ -42,7 +42,7 @@ from geser_tokenizer import GeserTokenizer
 tokenizer = GeserTokenizer()
 
 # Text in Seram(geser) language
-text = "Ini adalah contoh kalimat dalam bahasa Seram(geser) untuk dipecah."
+text = "aku nugu ngasana habiba, aku atamari wanu karay."
 
 # Perform tokenization
 tokens = tokenizer.tokenize(text)
@@ -59,8 +59,8 @@ print(f"Tokens: {tokens}")
 **Expected output (example)**:
 
 ```
-Original text: Ini adalah contoh kalimat dalam bahasa Seram(geser) untuk dipecah.
-Tokens: ['Ini', 'adalah', 'contoh', 'kalimat', 'dalam', 'bahasa', 'Seram(geser)', 'untuk', 'dipecah', '.']
+Original text: aku nugu ngasana habiba, aku atamari wanu karay. 
+Tokens: ['aku', 'nugu', 'ngasana', 'habiba', 'aku', 'atamari', 'wanu', 'wanu', 'karay','.']
 ```
 
 -----
