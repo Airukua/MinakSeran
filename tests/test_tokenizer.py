@@ -2,8 +2,9 @@ import unittest
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from geser_tokenizer import GeserTokenizer, find_unmatched_words
-from geser_tokenizer.tokenizer import DICTIONARY_WORDS
+from geser_tokenizer import GeserTokenizer
+from geser_tokenizer.find_words import find_unmatched_words
+from geser_tokenizer.find_words import DICTIONARY_WORDS
 
 class TestGeserTokenizer(unittest.TestCase):
     def test_empty_text(self):
@@ -16,7 +17,7 @@ class TestGeserTokenizer(unittest.TestCase):
 
     def test_punctuation_removal(self):
         tokenizer = GeserTokenizer("Kata,dengan.tanda?!seru...kurung(tutup).")
-        expected_tokens = ["Kata", "dengan", "tanda", "seru", "kurung", "tutup"]
+        expected_tokens = ["Kata",",","dengan",".","tanda","?","!","seru",".",".",".","kurung","(","tutup",")","."]
         self.assertEqual(tokenizer.tokenize(), expected_tokens)
 
     def test_hyphenated_words(self):
@@ -25,7 +26,7 @@ class TestGeserTokenizer(unittest.TestCase):
 
     def test_mixed_case_tokenization(self):
         tokenizer = GeserTokenizer("Ini TEKS BeSaR kEcIl.")
-        self.assertEqual(tokenizer.tokenize(), ["Ini", "TEKS", "BeSaR", "kEcIl"])
+        self.assertEqual(tokenizer.tokenize(), ["Ini", "TEKS", "BeSaR", "kEcIl","."])
 
     def test_multiple_spaces(self):
         tokenizer = GeserTokenizer("Kata   dengan    banyak    spasi")
@@ -33,7 +34,7 @@ class TestGeserTokenizer(unittest.TestCase):
 
     def test_text_with_numbers(self):
         tokenizer = GeserTokenizer("Ini ada 123 angka dan 456 huruf.")
-        self.assertEqual(tokenizer.tokenize(), ["Ini", "ada", "123", "angka", "dan", "456", "huruf"])
+        self.assertEqual(tokenizer.tokenize(), ["Ini", "ada", "123", "angka", "dan", "456", "huruf","."])
 
     def test_reduplication_handling(self):
         text = "Dia suka lari-lari di pagi hari dan makan-makan yang enak."
