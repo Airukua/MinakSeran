@@ -24,10 +24,10 @@
 You can install `seram tokenizer` directly from GitHub using `pip`:
 
 ```bash
-pip install git+https://github.com/Airukua/MinakSeran.git@v0.1.0
+pip install git+https://github.com/Airukua/MinakSeran.git@v1.1.0
 ```
 
-**Note**: It's recommended to install a tagged version (like `@v0.1.0` or the latest stable release) to ensure you get a stable build.
+**Note**: It's recommended to install a tagged version (like `@v1.1.0` or the latest stable release) to ensure you get a stable build.
 
 -----
 
