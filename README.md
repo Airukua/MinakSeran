@@ -6,13 +6,14 @@
 
 ### Project Description
 
-`Seram Tokenizer` is a Python library that provides tokenization functionality for the **Seram** language which are Geser, Gorom, and Waru. This tool is designed to break down Seram text into smaller units, such as words or sub-words, which is a fundamental step in natural language processing (NLP) and text analysis.
+`Seram Tokenizer` is a Python library designed to provide tokenization functionality for languages spoken on Seram Island, specifically Geser, Gorom, and Waru. These languages are part of the Austronesian family and are considered under-resourced in the field of natural language processing (NLP). This tool helps break down Seram text into smaller linguistic units—such as words or sub-words—which is a crucial step in NLP pipelines, corpus development, and linguistic analysis.
 
 -----
 
 ### Key Features
 
-  * **Efficient Tokenization**: Processes Seram text quickly and accurately.
+  * **Efficient Tokenization**: Accurately tokenizes Seram texts based on the morphological and phonological patterns of Geser, Gorom, and Waru.
+  * **Paragog Normalizer**: Detects and normalizes suffix-like sound variations (e.g., `-a`, `-ra`) that do not alter meaning but affect surface forms.
   * **Lightweight**: Minimal dependencies, easy to integrate into your projects.
   * **Easy to Use**: Simple and intuitive API interface.
 
