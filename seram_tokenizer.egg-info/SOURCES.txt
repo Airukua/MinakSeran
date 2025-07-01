@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+setup.py
+seram_tokenizer/__init__.py
+seram_tokenizer/find_reduplication.py
+seram_tokenizer/find_words.py
+seram_tokenizer/paragog_normaliser.py
+seram_tokenizer/tokenizer.py
+seram_tokenizer.egg-info/PKG-INFO
+seram_tokenizer.egg-info/SOURCES.txt
+seram_tokenizer.egg-info/dependency_links.txt
+seram_tokenizer.egg-info/requires.txt
+seram_tokenizer.egg-info/top_level.txt
+tests/__init__.py
+tests/test_tokenizer.py
