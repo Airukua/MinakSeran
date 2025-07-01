@@ -37,10 +37,10 @@ Here's a basic example of how to use `seram tokenizer` in your Python code:
 
 ```python
 # Import the library
-from geser_tokenizer import GeserTokenizer
+from seram_tokenizer import SeramTokenizer
 
 # Initialize the tokenizer
-tokenizer = GeserTokenizer()
+tokenizer = SeramTokenizer()
 
 # Text in Seram language
 text = "aku nugu ngasana habiba, aku atamari wanu karay."
