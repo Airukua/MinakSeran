@@ -56,8 +56,38 @@ print(f"Tokens: {tokens}")
 **Expected output (example)**:
 
 ```
-Original text: aku nugu ngasana habiba, aku atamari wanu karay. 
-Tokens: ['aku', 'nugu', 'ngasan', '_a', 'habiba', ',', 'aku', 'atamari', 'wanu', 'karay', '.']
+Original text: aku nugu ngasana habiba, aku atamari wanu karay.
+Tokens: ['aku', 'nugu', 'ngasana', 'habiba', ',', 'aku', 'atamari', 'wanu', 'karay', '.']
+```
+
+or if we could also utilse prefix and suffix level tokenization. However, this is a naive tokenization
+and it would not provide accurate tokenization since it relies only on dictionary lookup and rule-based
+tokenisation. Consequently, it might tokenize name such as 'habiba' to 'habib' '_a' which are not recommended.
+Nevertheless, it can be usefull in some areas.
+
+```python
+# Import the library
+from seram_tokenizer import SeramTokenizer
+
+# Text in Seram language
+text = "aku fas anggur a tura fudicastelara. Si dafakaleus ayaira"
+
+# Initialize the tokenizer
+tokenizer = SeramTokenizer(text, use_suffix=True, use_prefix=True)
+
+# Perform tokenization
+tokens = tokenizer.tokenize()
+
+# Print the results
+print(f"Original text: {text}")
+print(f"Tokens: {tokens}")
+```
+
+**Expected output (example)**:
+
+```
+Original text: aku fas anggur a tura fudicastelara. Si dafakaleus ayaira
+Tokens: ['aku', 'fas', 'anggur', 'a', 'tura', 'fudicastela', '_ra', '.', 'Si', 'da_', 'fakaleus', 'ayai', '_ra']
 ```
 
 See [experiment.ipynb](experiment.ipynb) to get more example usage.
