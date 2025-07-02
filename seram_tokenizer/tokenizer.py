@@ -29,8 +29,8 @@ class SeramTokenizer:
             List[str]: A list of tokenized words and punctuation.
         """
         if not self.text:
-            return []  # Return empty list for empty input text
-
+            return []
+        
         # Step 1: Detect reduplications and replace them with unique placeholders
         reduplications: List[str] = extract_reduplications(self.text)
         placeholder_map: Dict[str, str] = {}

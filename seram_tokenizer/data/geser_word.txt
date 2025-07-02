@@ -333,6 +333,7 @@ irus
 iris
 I pintar
 ire
+ira
 ita
 ito
 jabul
@@ -361,6 +362,7 @@ kamu-kamu
 kanisu
 kapasa
 kata
+kau
 keadaana
 kila
 kerfanas
@@ -375,6 +377,7 @@ kuli
 kurap
 kurseka
 kutang
+ku
 la
 lalan
 labir
