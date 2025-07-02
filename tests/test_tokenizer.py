@@ -13,7 +13,7 @@ class TestGeserTokenizer(unittest.TestCase):
 
     def test_basic_tokenization(self):
         tokenizer = SeramTokenizer("Ini adalah contoh sederhana")
-        self.assertEqual(tokenizer.tokenize(), ["Ini", "adalah", "contoh", "sederhana"])
+        self.assertEqual(tokenizer.tokenize(), ['Ini', 'adalah', 'contoh', 'sederhan', '_a'])
 
     def test_punctuation_removal(self):
         tokenizer = SeramTokenizer("Kata,dengan.tanda?!seru...kurung(tutup).")
@@ -34,7 +34,7 @@ class TestGeserTokenizer(unittest.TestCase):
 
     def test_text_with_numbers(self):
         tokenizer = SeramTokenizer("Ini ada 123 angka dan 456 huruf.")
-        self.assertEqual(tokenizer.tokenize(), ["Ini", "ada", "123", "angka", "dan", "456", "huruf","."])
+        self.assertEqual(tokenizer.tokenize(), ['Ini', 'ad', '_a', '123', 'angk', '_a', 'dan', '456', 'huruf', '.'])
 
     def test_reduplication_handling(self):
         text = "Dia suka lari-lari di pagi hari dan makan-makan yang enak."

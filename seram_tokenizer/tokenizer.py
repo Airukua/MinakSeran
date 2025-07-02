@@ -47,9 +47,6 @@ class SeramTokenizer:
         ra_words = self.suffix_analyser.find_ra_suffix_words()
         a_words = self.suffix_analyser.find_a_suffix_words()
 
-        print(f'ra_words: {ra_words}')
-        print(f'a_words: {a_words}')
-
         # Step 2: Tokenize including punctuation as separate tokens
         raw_tokens = self.token_pattern.findall(processed_text)
 
