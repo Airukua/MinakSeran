@@ -2,6 +2,7 @@
 import re
 from typing import List, Dict
 from .find_reduplication import extract_reduplications
+from .suffix_analayser import SuffixAnalyser
 
 class SeramTokenizer:
     """
@@ -19,6 +20,7 @@ class SeramTokenizer:
             raise TypeError("Input 'text' must be a string.")
         self.text = text
         self.token_pattern = re.compile(r'\w+|[^\w\s]')
+        self.suffix_analyser = SuffixAnalyser(self.text)
 
     def tokenize(self) -> List[str]:
         """
@@ -34,12 +36,19 @@ class SeramTokenizer:
         # Step 1: Detect reduplications and replace them with unique placeholders
         reduplications: List[str] = extract_reduplications(self.text)
         placeholder_map: Dict[str, str] = {}
-        processed_text = self.text
+        processed_text = self.text        
 
         for i, word in enumerate(reduplications):
             placeholder = f"__REDUPLICATION_PLACEHOLDER_{i}__"
             processed_text = re.sub(re.escape(word), placeholder, processed_text)
             placeholder_map[placeholder] = word
+        
+        #Step 2: Identify any 'ra' or 'a' suffix words
+        ra_words = self.suffix_analyser.find_ra_suffix_words()
+        a_words = self.suffix_analyser.find_a_suffix_words()
+
+        print(f'ra_words: {ra_words}')
+        print(f'a_words: {a_words}')
 
         # Step 2: Tokenize including punctuation as separate tokens
         raw_tokens = self.token_pattern.findall(processed_text)
@@ -49,7 +58,15 @@ class SeramTokenizer:
         for token in raw_tokens:
             for placeholder, original_word in placeholder_map.items():
                 token = token.replace(placeholder, original_word)
-            final_tokens.append(token)
+            
+            if token in ra_words and token.endswith('ra'):
+                base = token[:-2]
+                final_tokens.extend([base, '_ra'])
+            elif token in a_words and token.endswith('a'):
+                base = token[:-1]
+                final_tokens.extend([base, '_a'])
+            else:
+                final_tokens.append(token)
 
         return final_tokens
 
