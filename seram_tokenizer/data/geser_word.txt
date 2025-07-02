@@ -1,46 +1,44 @@
 aba-aba
 abata
-abi-abis
-bababis
 abdi
+abi-abis
 abu-abu
 adat
-ah
-afi 
+afi
 afi boil
 afi war
+ah
 ais
-gais
-faik
 akar
 akata
 alata
+alatala namadein
 aliran
 alu
 alus
 amal
 aman
+amanat
 amas
 amat
-amanat
 amin
 anak
-anak rumao
-anako
-anak tiri
-anak himaita
-anak far-farara
 anak derus
+anak far-farara
+anak himaita
+anak rumao
+anak tiri
+anako
 ancam
 ancaman
 ancang-ancang
 ancar-ancar
 angan
 angin garana
-angin timur
-angin warat
 angin mudamar
 angin tarangana
+angin timur
+angin warat
 angkasa
 angkasa luar
 angkat
@@ -51,85 +49,85 @@ angsa
 angsuran
 anjungan
 ar
-ar kotor
 ar inu
-ar luo
+ar kotor
 ar kotora
+ar luo
 ar urana
-arang
-arumbaura
 arah
 arah tujuan
 arahan
+arang
 arsip
+arumbaura
 arwa
 asar
 asara
 asian
 aspal
 asrama
+at
 ata
+ata wida
 au
 au tai
-aun
 aul
-alatala namadein
-at
-ata wida
+aun
 awan
 awan metana
-awas hiraita
 awas fukata
+awas hiraita
 awotu
 baba
+bababis
 baca
-barenti
-baretan
 bagan
 bagana
 bagi
-bagian
 bagi-bagi
+bagian
 bahala
 bahan
 baja
 bajak
-bajak laut
 bajak barang
+bajak laut
 bajingan
 baka
 bakal
-bakal calon
 bakal buah
+bakal calon
+bakar
+bakas
+baku
+balajar
+balan
+balap
+balara
+balas
 balon
 balon gas
 balon udara
-baku
-balan
-balara
-balap
-balas
+baluku
 ban
+banar
 banar
 bangsa
 bangsal
 banifis
+banjir
 barak
-baras
 barakat
 barani
+baras
+barenti
+baretan
 baris
 barisana
 barita
-baru
+barot
 barsi
-bakas
-roti
-bakar
-balajar
-banar
-banjir
-baluku
+baru
 basalik
 batolur
 bei
@@ -144,28 +142,27 @@ bijaksana
 binatang
 biru
 bisak
+bo wani
 bobak
 boda
-boros
 bolomin
 boluk
 boluk tubalo
 boluke
-botu
 bora
-bo wani
-mura wani
+boros
+botu
+bua
 bual
-bus
+buka
 bulat
 bulur
 bunga
 buru
+bus
 buta huruf
 buti
-buka
 butira
-bua
 cangkula
 cara
 carita
@@ -176,15 +173,15 @@ cengkih fus
 cepak
 cerdas
 cerek
+coklata
 colo
 colo-colo
 cor
 coraka
-coklata
 da
-daun
 dadafi
 dadafira
+dagi
 daging
 daka
 dakan
@@ -192,17 +189,17 @@ dakuk
 dalela
 dam
 damain
-datamain
 damar
 damoman
 danau
+dapasiar
 darakan
 daratana
-dapasiar
-dagi
+datamain
 datan
 datara
 dataru
+daun
 dawawa
 dawei
 dekin
@@ -211,105 +208,110 @@ didik
 dikat
 dikin
 dium
-dudu
-durmidan
 dodan sa
 dodi
 dotik
+dudu
 dular
+durmidan
 eal
 ealo
 ebar
 ega
-esi
-ena
-esibaban
 egin erira
-frak
+ena
+esi
+esibaban
 fafanak
-fana-fanak
-falanguru
-fanga
-fanak
 faik
-fakaleus
-fakasi
-fat
-faka roti
+faik
 faka fat
 faka fin
+faka roti
+faka sasai
+fakaleus
+fakasi
+fakawai
+falanguru
 falaru
+fana-fanak
+fanak
+fanga
+farlak
 fas
 fasa
-frek
-farlak
-faka sasai
-fakawai
-fusala'
-fudi
+fat
 fial
+fingkatu
 fitu
+fofosal
 foru
 foruk
-fofosal
+frak
+frek
+fudi
+fusala'
 ga
 gafin
 gai
 gais
-garuk
-gas
-gasing
+gais
+galak
+galang
 galap
 galas
+galiga
 galigir
 gam
 gambara
 gambira
 gampang
+gantung
 garan
 garat
-galak
 garatak
+garuk
+gas
+gasing
 geik
 gelar
-galang
-galiga
-gantung
-gembira
 gembala
+gembira
 goa
 gok
-gori'
 gondoka
+gori'
 guan
 guan bunga
 gugun
 gunung
 gutik
 hadak
-haus
 haka hat
 halaboana
 halulun
 hanoa
 hantang
 hapus
+haus
 hegus
 hemat
 hidup
+hikir
 hilaru
 his
 hisak
 hisukat
-hikir
 hitu
 hiwei
 hohosal
-horu
-husak'
 horak
+horu
 hot
+husak'
 i
+I pintar
+I rama
 ihit
 ijo
 ikan
@@ -317,25 +319,23 @@ ike
 ike ubalita
 ike ukun
 ike uwanan
-iso
 ila
-ilu
 ilo
-ru
+iloa
+ilu
 imā
 imā liur
-iloa
+ingat
 inu
 inu-inura
-ingat
-I rama
-irus
-iris
-I pintar
-ire
 ira
+ire
+iris
+irus
+iso
 ita
 ito
+iwa
 jabul
 jahat
 jahera
@@ -346,75 +346,83 @@ jandela
 jelusi
 jerita
 juara
+juk
 junjung
 jus
 juz
-kayara
 kabai
 kaca
 kaca kokao
 kaco
+kada
 kada kolora
+kai
 kain batik
 kain belang
 kali-kali
 kamu-kamu
 kanisu
 kapasa
+kar
 kata
 kau
+kayara
 keadaana
-kila
 kerfanas
-kous kutanga
+kila
+kinu
 kota
 kotan
 kotor
-kar
+kous kutanga
+ku
 kuk
-kutu
 kuli
 kurap
 kurseka
+kurseka
 kutang
-ku
+kutu
+kutu
 la
-lalan
 labir
 labitong
-lait
 lada
 ladan
 ladan adata
-ladang
 ladan kebasarana
+ladang
+lait
+lalan
 lalan
 lalana
 lam
 lambat
+laminora gafin
 laminora tetewi
 laminosi tetewi
-laminora gafin
-langita
 langit taio
+langita
 langka
 lapang
 lapangan
-latla
+latar
 latika
+latla
 lau
-layang-layang
 laut
+layang-layang
 leba
 lebar
 lebara
 ledurv
-leluk
-lem
-lenga goal
 lekan
 leku
+leluk
+lem
+leman
 lenga
+lenga goal
 lewa
 lidir
 likit
@@ -422,71 +430,73 @@ lilin
 lim
 lium
 liur
-luak
-luas
-luluak
-lupa
-lusun
+liwa
 loas
-loir
 lofat
+loir
+loka
 lokuo
 losu
 losuk
 losuk tutulako
 lotu
+luak
+luas
+luluak
+lupa
+lusun
 ma
 madiara
-magi
-magei
 mafanas
 mafiguan
 mafuti
+magei
+magi
+makaweru
 mal
 malas
 maleman
 maleman paskali
 malif
 malu
-malura
 maluis
+malura
 mam
 mama
 mamahun
-manuk
-makaweru
 mana
+mancia
+mancia
+mancia diana
+mancia hitutu besira
+mancia motisi
+mancia tawara
+manganga
+mangeran
 manihi
 manira
-mancia
+manjur
+manuk
+manyanyi
 marani
 marar
-mariri
 maridin
+mariri
 mas
-masin
 masarat
+masin
 masingat
 masir
 mata
 mata alo
-matāo
 mata baranira
-matara
-mata gahina
 mata fitauk
+mata gahina
 matakut
+matara
 matarin
 matoran
-mancia
-mancia diana
-mancia tawara
-mancia motisi
-mancia hitutu besira
-manganga
-mangeran
-manjur
-manyanyi
+matāo
 meletus
 mema
 mera
@@ -494,159 +504,168 @@ mera rarara
 merah jambu
 metan
 mi
+mian
 milyaun
+minak
 miring
-mudamar
-mumut
-mumura
-mumuruk
-muntila
-mutil
-musi
-musim urana
-musim ul
+moak
+moale
 mohon
-obatan
 molis
 momar
 momodar
 momokata
-moale
+motora
+motura
 muale
+mudamar
+mumura
+mumuruk
+mumut
+muntila
+mura wani
+musi
+musim ul
+musim urana
+mutil
 na
 nababu
 nabagutik
 nabar
 nabar
-nagamarani
-nagima
 nabuali
-nibuala
 nadou
-nai
-naire
-naira
-nakaul
-najaga
-nake uwanana
-nake ubalita
-nake ukun
-nakifit pulas
-nahasu
 nafiyal
 nafiyayal
-nasumak
+nagamarani
 nagi
+nagima
+nahasu
 nai
-namā
-namamalui
+nai
+naira
+naire
+najaga
+nakaul
+nake ubalita
+nake ukun
+nake uwanana
+nakifit pulas
 nama liur
-nama uwanana
 nama ubalita
-nar
+nama uwanana
+namamalui
+namawu
+namā
 nanara
+nar
 nasiungan
 nasosa marar
+nasumak
 nasûm
-natagi tasik
 natagi tasi
+natagi tasik
 natara
 natauk i
 natiu
 nawau
-namawu
-nawurak
 nawei anak
-ngasan
+nawurak
 ngangu
-ngarakn
 ngarak
+ngarakn
+ngasan
 ngisik
 ni babara
 ni sisi
-nina
-ni wuranara
-ni winara
 ni wawinara
-nular
+ni winara
+ni wuranara
+nibuala
+nina
+nofo
 nugu baba
 nukut
+nular
 numu baba
-nofo
 nyira
 oang
+obatan
 oca
 odi
 odi-odira
 okas
-oras
-ola hadako
 ola ata
 ola galap
+ola hadako
 ola wawa
 onan
-otan
+oras
 orens
 ortala namadein
+otan
 padanga
 pagar
 palekat
 parângn
 pawang
-pintal
 peal
 pele
 pera
+pintal
 Qaf
 qur'an
-roba
 rabun
 raca
 rait
 rajasinga
-rauh
-rarapat
 rajim
-rekin
 rama
 rang-ranga
-ratus
 rantira
-rara
 rapat
+rara
+rarapat
 rata
+ratan
+ratus
+rauh
+rekin
 rifi
 rim
 rium
-riun ratca
-rium ratca utca
 rium lium
+rium ratca utca
 riun
-rubami
-ruo
-ruri
-rurut
-ruk
-roun
+riun ratca
+roba
 roman
 rongan
 roti
+roti
+roun
+ru
+rubami
+ruk
+ruo
+ruri
+rurut
 sa
-sabar
 sa rottolo
+sabar
+saka
+sakakar
 sala
+salendang
+salik
 saling
+salompara
 sandal
 sandar
 sapatura
 sarasara
-salik
-salendang
-salompara
-saka
-sakakar
-sehat
 sawara
+sehat
 sehat
 sei
 sela
@@ -657,37 +676,41 @@ sibura
 sidi
 sigal
 sigu
-sikom
 sikarura
+sikom
 silik
+sinabi
 sinelara
 sira
-suar
-suit
-sulak
-susu
-susuk
-sukara
-sula
-sulit
-sumak
-sumilar
-sumakan
-suwar
+sisiru
 soa
-sou
+sonto
+sopan
 sosan
 sosolat
-sopan
-sonto
+sou
+suan
+suar
+suat
+suit
+sukara
+sula
+sulak
+sulit
+sumak
+sumakan
+sumbiyang
+sumilar
+susu
+susuk
+suwar
 tabara
-tagi
 taga
+tagi
 takrau
 talano
 tali
 tamain
-tumoman
 tana
 tanang
 tantangana
@@ -696,33 +719,36 @@ tarangan
 taregal
 tarima
 taru
+tata urana
+tata wawina
+tauk
 taun
 tauna
-tauk
 te
 tei
 teifua
+tekis
+tekus
+tela
 telinga
 tenun
-tekus
-tekis
 tetewara
 tigana
 tilar
 timur lean
 tinauk
 tinira
-tinumura
 tiniti
+tinumura
 tium
 togira
+tokun
 tolan
 tolu
 tolur
 tongkat
-tokun
-tonsoara
 tono soa
+tonsoara
 topira
 totolang
 tu
@@ -730,36 +756,30 @@ tua
 tual
 tukan
 tulis
+tumoman
+tupai
+tura
 turuv
 tutu
-tupai
+uako'
 uana
 uanan
-uako'
-uban
 ubalit
+uban
 ubanga
 ubung
 uca
 uca resi alu
+uca resi ilim
+uca resi onan
+uca resi sia
+uca resi tolu
+ucaresi
 ucasi asai
 ucasi hat
 ucasi hitu
-uca resi ilim
-uca resi sia
-ucaresi
 ucasi roti
-uca resi onan
 udara
-uca resi tolu
-utu fitu
-utu lim
-utu onan
-uttolu
-uttolu resi lim
-utu ru
-utu resi lim
-utu sia
 uka
 ula-ulak
 ulan
@@ -767,51 +787,60 @@ ulas
 ulat
 um
 un
-unin
 ungu
+unin
 uran
-kurseka
-kutu
+urana
+uttolu
+uttolu resi lim
+utu fitu
+utu lim
+utu onan
+utu resi lim
+utu ru
+utu sia
 utuin
 ututin leana
 varlak
 ventilasi
 vitamin
+wakas
+wakir
+wala
+wanu
+warana
 waras
 warat
 warat esi
 warat lau
-warana
-waun
-wakir
 watan
-watu 
+watu
 watu ara
-wakas
-wala
+waun
 wawa
-wawawa
 wawalana
+wawawa
 wawina
 weala
 wekan
 wida
-widao
+wida kuwanan
 wida mudamar
 wida tarangan
 wida timur
 wida ubalita
-wida kuwanan
 wida warata
+widao
 wisul
 wisul leana
 woi
+wokas
 wotuo
 woun
-wokas
+wowa
 ya
 yayai
 yayaira
-zat
 zakar
 zakat
+zat

@@ -1,6 +1,5 @@
 import os
 from typing import List, Set
-import re
 from pathlib import Path
 from importlib.resources import files
 
@@ -89,9 +88,7 @@ class SuffixAnalyser:
         checked_ra (List[str]): 'ra' words not found in dictionary lemmas.
         checked_a (List[str]): 'a' words not found in dictionary lemmas.
     """
-    
-    __slots__ = ('words', 'split_words', 'ra_words', 'a_words', 'checked_ra', 'checked_a')
-    
+        
     def __init__(self, words: str):
         """
         Initialize the SuffixAnalyser with input text.
