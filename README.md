@@ -87,7 +87,7 @@ print(f"Tokens: {tokens}")
 
 ```
 Original text: aku fas anggur a tura fudicastelara. Si dafakaleus ayaira
-Tokens: ['aku', 'fas', 'anggur', 'a', 'tura', 'fudicastela', '_ra', '.', 'Si', 'da_', 'fakaleus', 'ayai', '_ra']
+Tokens: ['aku', 'fas', 'anggu', '_ra', 'tura', 'fudicastela', '_ra', '.', 'Si', 'da_', 'fakaleus', 'ayai', '_ra']
 ```
 
 See [experiment.ipynb](experiment.ipynb) to get more example usage.
