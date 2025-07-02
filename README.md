@@ -14,6 +14,7 @@
 
   * **Efficient Tokenization**: Accurately tokenizes Seram texts based on the morphological and phonological patterns of Geser, Gorom, and Waru.
   * **Paragog Normalizer**: Detects and normalizes suffix-like sound variations (e.g., `-a`, `-ra`) that do not alter meaning but affect surface forms.
+  * **Suffix and Prefix Tokenizer**: Detects and tokenize suffix and Prefix (e.g., `na_`, `da_`).
   * **Lightweight**: Minimal dependencies, easy to integrate into your projects.
   * **Easy to Use**: Simple and intuitive API interface.
 
