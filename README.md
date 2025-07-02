@@ -86,7 +86,7 @@ print(f"Tokens: {tokens}")
 **Expected output (example)**:
 
 ```
-Original text: aku fas anggur a tura fudicastelara. Si dafakaleus ayaira
+Original text: aku fas anggura tura fudicastelara. Si dafakaleus ayaira
 Tokens: ['aku', 'fas', 'anggu', '_ra', 'tura', 'fudicastela', '_ra', '.', 'Si', 'da_', 'fakaleus', 'ayai', '_ra']
 ```
 
