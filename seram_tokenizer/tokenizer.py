@@ -3,6 +3,7 @@ import re
 from typing import List, Dict
 from .find_reduplication import extract_reduplications
 from .suffix_analayser import SuffixAnalyser
+from .prefix_analyser import PrefixAnalyser
 
 class SeramTokenizer:
     """
@@ -20,7 +21,6 @@ class SeramTokenizer:
             raise TypeError("Input 'text' must be a string.")
         self.text = text
         self.token_pattern = re.compile(r'\w+|[^\w\s]')
-        self.suffix_analyser = SuffixAnalyser(self.text)
 
     def tokenize(self) -> List[str]:
         """
@@ -42,13 +42,26 @@ class SeramTokenizer:
             placeholder = f"__REDUPLICATION_PLACEHOLDER_{i}__"
             processed_text = re.sub(re.escape(word), placeholder, processed_text)
             placeholder_map[placeholder] = word
+
+        # Step 4: Tokenize including punctuation as separate tokens
+        raw_tokens = self.token_pattern.findall(processed_text)
+
+        # Step 3: Remove punctuations for prefix/suffix analysis
+        clean_tokens = [t for t in raw_tokens if t.isalpha()]
+
+        # Step 4: Analyze suffixes and prefixes only on clean tokens
+        self.suffix_analyser = SuffixAnalyser(" ".join(clean_tokens))
+        self.prefix_analyser = PrefixAnalyser(" ".join(clean_tokens))
         
         #Step 2: Identify any 'ra' or 'a' suffix words
         ra_words = self.suffix_analyser.find_ra_suffix_words()
         a_words = self.suffix_analyser.find_a_suffix_words()
 
-        # Step 2: Tokenize including punctuation as separate tokens
-        raw_tokens = self.token_pattern.findall(processed_text)
+        # Step 3: Identify 'na' and 'da' prefix words
+        na_words = self.prefix_analyser.get_na_words()
+        da_words = self.prefix_analyser.get_da_words()
+
+
 
         # Step 3: Restore reduplications from placeholders
         final_tokens: List[str] = []
@@ -62,6 +75,12 @@ class SeramTokenizer:
             elif token in a_words and token.endswith('a'):
                 base = token[:-1]
                 final_tokens.extend([base, '_a'])
+            elif token in na_words and token.startswith('na'):
+                base = token[2:]
+                final_tokens.extend(['na_', base])
+            elif token in da_words and token.startswith('da'):
+                base = token[2:]
+                final_tokens.extend(['da_', base])
             else:
                 final_tokens.append(token)
 

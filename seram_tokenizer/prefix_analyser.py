@@ -3,7 +3,6 @@ from typing import List, Set
 from pathlib import Path
 from importlib.resources import files
 
-
 def get_resource_path(package: str, resource: str) -> str:
     return str(files(package) / resource)
 
@@ -123,21 +122,3 @@ class PrefixAnalyser:
     def get_da_words(self) -> List[str]:
             """Get words starting with 'da'."""
             return self.checked_da
-
-if __name__ == "__main__":
-    # Dummy data untuk pengujian
-    LEMMA_WITH_NA = {'naga', 'namira', 'naira'}
-    LEMMA_WITH_DA = {'dadu', 'dana', 'dari'}
-
-    # Teks masukan untuk diuji
-    input_text = "naga namira naira nadia dadu dana dari dasar dalam"
-
-    # Jalankan analisanya
-    analyser = PrefixAnalyser(input_text)
-
-    # Tampilkan hasil
-    print("Kata dengan prefix 'na' yang tidak ada di lemma:")
-    print(analyser.get_na_words())
-
-    print("\nKata dengan prefix 'da' yang tidak ada di lemma:")
-    print(analyser.get_da_words())
