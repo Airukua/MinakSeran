@@ -10,7 +10,7 @@ class SeramTokenizer:
     A tokenizer for Seram text, designed to handle reduplicated words and preserve punctuation as separate tokens.
     """
 
-    def __init__(self, text: str):
+    def __init__(self, text: str, use_suffix:bool = False, use_prefix:bool = False):
         """
         Initializes the SeramTokenizer with the input text.
 
@@ -20,6 +20,8 @@ class SeramTokenizer:
         if not isinstance(text, str):
             raise TypeError("Input 'text' must be a string.")
         self.text = text
+        self.use_suffix = use_suffix
+        self.use_prefix = use_prefix
         self.token_pattern = re.compile(r'\w+|[^\w\s]')
 
     def tokenize(self) -> List[str]:
@@ -45,40 +47,37 @@ class SeramTokenizer:
 
         # Step 4: Tokenize including punctuation as separate tokens
         raw_tokens = self.token_pattern.findall(processed_text)
-
-        # Step 3: Remove punctuations for prefix/suffix analysis
-        clean_tokens = [t for t in raw_tokens if t.isalpha()]
-
-        # Step 4: Analyze suffixes and prefixes only on clean tokens
-        self.suffix_analyser = SuffixAnalyser(" ".join(clean_tokens))
-        self.prefix_analyser = PrefixAnalyser(" ".join(clean_tokens))
         
-        #Step 2: Identify any 'ra' or 'a' suffix words
-        ra_words = self.suffix_analyser.find_ra_suffix_words()
-        a_words = self.suffix_analyser.find_a_suffix_words()
+        # Step 3: Affix Analysis Prep
+        clean_tokens = [t for t in raw_tokens if t.isalpha()]
+        ra_words, a_words, na_words, da_words = set(), set(), set(), set()
 
-        # Step 3: Identify 'na' and 'da' prefix words
-        na_words = self.prefix_analyser.get_na_words()
-        da_words = self.prefix_analyser.get_da_words()
+        if self.use_suffix:
+            suffix_analyser = SuffixAnalyser(" ".join(clean_tokens))
+            ra_words = suffix_analyser.find_ra_suffix_words()
+            a_words = suffix_analyser.find_a_suffix_words()
 
+        if self.use_prefix:
+            prefix_analyser = PrefixAnalyser(" ".join(clean_tokens))
+            na_words = prefix_analyser.get_na_words()
+            da_words = prefix_analyser.get_da_words()
 
-
-        # Step 3: Restore reduplications from placeholders
-        final_tokens: List[str] = []
+        # Step 4: Restore reduplications + apply affix splitting
+        final_tokens = []
         for token in raw_tokens:
             for placeholder, original_word in placeholder_map.items():
                 token = token.replace(placeholder, original_word)
-            
-            if token in ra_words and token.endswith('ra'):
+
+            if self.use_suffix and token in ra_words and token.endswith('ra'):
                 base = token[:-2]
                 final_tokens.extend([base, '_ra'])
-            elif token in a_words and token.endswith('a'):
+            elif self.use_suffix and token in a_words and token.endswith('a'):
                 base = token[:-1]
                 final_tokens.extend([base, '_a'])
-            elif token in na_words and token.startswith('na'):
+            elif self.use_prefix and token in na_words and token.startswith('na'):
                 base = token[2:]
                 final_tokens.extend(['na_', base])
-            elif token in da_words and token.startswith('da'):
+            elif self.use_prefix and token in da_words and token.startswith('da'):
                 base = token[2:]
                 final_tokens.extend(['da_', base])
             else:
