@@ -60,9 +60,9 @@ Original text: aku nugu ngasana habiba, aku atamari wanu karay.
 Tokens: ['aku', 'nugu', 'ngasana', 'habiba', ',', 'aku', 'atamari', 'wanu', 'karay', '.']
 ```
 
-or if we could also utilse prefix and suffix level tokenization. However, this is a naive tokenization
+Or, if we could also utilise prefix and suffix level tokenization. However, this is a naive tokenization
 and it would not provide accurate tokenization since it relies only on dictionary lookup and rule-based
-tokenisation. Consequently, it might tokenize name such as 'habiba' to 'habib' '_a' which are not recommended.
+tokenisation. Consequently, it might tokenize name such as `'habiba'` to `'habib' '_a'` which are not recommended.
 Nevertheless, it can be usefull in some areas.
 
 ```python
